@@ -1,0 +1,17 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+
+<center>
+    <form action="" method="post">
+        {% csrf_token%}
+        <h1>S'enregistrer</h1>
+        <input type="text" name="username" placeholder="Nom ici">
+        <br><br>
+        <input type="password" name="password" placeholder="Mot de passe ici">
+        <br><br>
+    <button type="submit" class="btn btn-outline-primary">Enregistrer</button>
+    </form>
+</center>
+
+{% endblock content %}

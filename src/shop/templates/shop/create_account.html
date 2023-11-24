@@ -1,0 +1,12 @@
+{% extends "shop/base.html" %}
+
+{% block content %}
+
+<center>
+    <h1 style="font-weight: bold;">VOUS DEVEZ ETRE CONNECTE A VOTRE COMPTE POUR REALISER CETTE TACHE</h1>
+    <p>
+        <a href="{% url 'index' %}" class="btn btn-outline-primary">OK</a>
+    </p>
+</center>
+
+{% endblock content %}

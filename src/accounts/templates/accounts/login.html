@@ -1,0 +1,16 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+
+<center>
+    <form action="" method="post" >
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Nom d'utilisateur ici">
+        <br><br>
+        <input type="password" name="password" placeholder="Mot de passe ici">
+        <br><br>
+        <button type="submit" class="btn btn-outline-primary">Connexion</button>
+    </form>
+</center>
+
+{% endblock content %}

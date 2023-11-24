@@ -1,0 +1,29 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <img src="{{ product.image.url }}" alt="" width="500px" height="500px">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="font-weight: bold;" class="text-warning display-3">
+                {{ product.title }}
+            </div>
+            <div class="text-danger" style="font-weight: bold;">
+               Prix : {{ product.price }} Francs
+            </div>
+            <div>
+                {{ product.description }}
+            </div>
+            {% if user.is_authenticated %}
+                <a href="{% url 'add-to-cart' product.id %}" style="font-weight: bold;">Ajouter</a>
+            {% else %}
+                <a href="{% url 'erreur' %}" class="btn btn-success" style="font-weight: bold;">Ajouter</a>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock content %}
